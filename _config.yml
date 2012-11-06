@@ -33,7 +33,6 @@ disqus_short_name: shawhu
 disqus_show_comment_count: 5
 google_analytics_tracking_id: UA-34850864-1
 google_search_id: 010105547632735252772:zhur5xgjxg8
-baidu_tongji_tracking_id: 3Ff4bbcb5461e4649a83236b0898143797
 
 #Generate css
 #compass compile --css-dir stylesheets
