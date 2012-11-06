@@ -1,0 +1,31 @@
+{% unless page.no_header %}
+<header>
+<h1 class="entry-title">{{ page.title | titlecase }}</h1>
+{% unless page.meta == false %}
+<p class="meta">
+<time>{{ page.date | date: "%Y-%b-%d" }}</time>
+</p>
+{% endunless %}
+</header>
+{% endunless %}
+{% if index %}
+<div class="entry-content">{{ content | excerpt }}</div>
+{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+{% if excerpted == 'true' %}
+<footer>
+<a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+</footer>
+{% endif %}
+{% else %}
+<div class="entry-content">{{ content }}</div>
+<section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+        <li class="related">
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</section>
+{% endif %}

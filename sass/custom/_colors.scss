@@ -1,0 +1,102 @@
+// Here you can easily change your sites's color scheme.
+// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
+// If you need a handy color picker try http://hslpicker.com
+
+$header-bg: #263347;
+$subtitle-color: lighten($header-bg, 58);
+$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
+$nav-bg-front: image-url('noise.png');
+$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
+$sidebar-bg: desaturate(#eceff5, 8);
+$sidebar-link-color: saturate(#526f9a, 10);
+$sidebar-link-color-hover: darken(#7ab662, 9);
+$footer-bg: #ccc !default;
+$footer-bg-front: image-url('noise.png');
+$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
+
+
+/* To use the light Solarized highlighting theme uncomment the following line */
+//$solarized: light;
+
+/* If you want to tweak the Solarized colors you can do that here */
+$base03:          #002b36; //darkest blue
+$base02:          #073642; //dark blue
+$base01:          #586e75; //darkest gray
+$base00:          #657b83; //dark gray
+$base0:           #839496; //medium gray
+$base1:           #93a1a1; //medium light gray
+$base2:           #eee8d5; //cream
+$base3:           #fdf6e3; //white
+$solar-yellow:    #b58900;
+$solar-orange:    #cb4b16;
+$solar-red:       #dc322f;
+$solar-magenta:   #d33682;
+$solar-violet:    #6c71c4;
+$solar-blue:      #268bd2;
+$solar-cyan:      #2aa198;
+$solar-green:     #859900;
+
+
+/* Non highlighted code colors */
+//$pre-bg: $base03;
+//$pre-border: darken($base02, 5);
+//$pre-color: $base1;
+
+//Custom Setting
+html {
+  background: url("/images/wood.jpg") repeat scroll 0 0 transparent;
+}
+
+//////////////////////////////
+//Tags And Categories
+//////////////////////////////
+
+$img-border: #93a1a1;
+$text-color: #1F1414;
+$link-color-hover: #cb4b16;
+$text-color-dark: #1F1E14;
+$text-title-color: #ff0000;
+
+#blog-marks {
+  article {
+    position: relative;
+    margin:{left: 0.2em; top: 0.3em; right: 0.1em; bottom: 0.3em;}
+    h1 { 
+      font-color:$text-title-color; 
+      font-size: 1.5em ;
+      margin:{left: 0.2em; top: 0.2em; right: 0.2em; bottom: 0.2em;}   
+    }
+ 	  h3 {
+    	font-size: 1em;
+      font-color: $solar-cyan;
+      margin:{left: 1em; top: 0.2em; right: 0.2em; bottom: 1em;}
+    	a {
+        font-size: 1em;
+      	@include hover-link;
+      	color: $solar-blue;
+      	&:hover { color: $link-color-hover; }
+      	font-weight: normal;
+        margin:{left: 1em; top: 1em; right: 0.2em; bottom: 1em;}
+    	}
+  	}
+    border: darken($base1, 10);
+    border-top: lighten($base1, 15);
+    border-bottom: darken($base1, 25);
+    border-left: darken($base1, 11);
+    border-right: lighten($base1, 7);
+  }
+}
+
+#content > .categories {
+  article {
+    margin-left: 0;
+    padding-left: 1.2em;
+  }
+}
+
+#content > .tags {
+  article {
+    margin-left: 0;
+    padding-left: 1.2em;
+  }
+}

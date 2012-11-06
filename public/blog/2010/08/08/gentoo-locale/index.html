@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>gentoo 中文化指南 - 慎独</title>
+  <meta name="author" content="Shawhu">
+  
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link href="/stylesheets/highlight.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/javascripts/modernizr-2.0.js"></script>
+  <script type="text/javascript" src="/javascripts/octopress.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.tagcloud.js"></script>
+  <link href="/atom.xml" rel="alternate" title="慎独" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34850864-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+       document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%"+ 3Ff4bbcb5461e4649a83236b0898143797 +"' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+
+
+</head>
+<body>
+  <header role="banner">
+  	<hgroup>
+  	<h1><a href="/" nofollow>慎独</a></h1>
+  	
+    	<h2>诚其意者，勿自欺也.</h2>
+  	
+  	<div class="clear"></div>
+	</hgroup>
+  </header>
+  <nav role="navigation">
+    <ul class="subscription" data-subscription="rss">
+  	  <li>
+  		<a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+  	  </li>
+    </ul>
+    
+    <form action="http://www.google.com.hk/cse" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="cx" value="010105547632735252772:zhur5xgjxg8"/>
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+    
+    <ul class="main-navigation">
+      <li><a href="/" nofollow >Blog</a></li>
+      <li><a href="/blog/archives" nofollow >Archives</a></li>
+      <li><a href="/about" nofollow >About</a></li>
+    </ul>	
+  </nav>
+  <div id="main">
+    <div id="content">
+      <div>
+	<article class="hentry" role="article">
+	
+<header>
+<h1 class="entry-title">gentoo 中文化指南</h1>
+
+<p class="meta">
+<time>2010-Aug-08</time>
+</p>
+
+</header>
+
+
+<div class="entry-content"><h4>设置locale</h4>
+
+<p>编辑/etc/locale.gen中添加</p>
+
+<div class="highlight"><pre><code class="c"><span class="n">zh_CN</span><span class="p">.</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+<span class="n">zh_CN</span><span class="p">.</span><span class="n">GBK</span>
+<span class="n">zh_CN</span><span class="p">.</span><span class="n">GB2312</span>
+<span class="n">zh_CN</span><span class="p">.</span><span class="n">GB18030</span>
+</code></pre>
+</div>
+
+
+<p>然后运行locale-gen命令</p>
+
+<h4>设置默认locale环境</h4>
+
+<p>编辑/etc/env.d/02locale</p>
+
+<div class="highlight"><pre><code class="c"><span class="n">LANG</span><span class="o">=</span><span class="s">&quot;zh_CN.UTF-8&quot;</span>
+<span class="n">LC_CTYPE</span><span class="o">=</span><span class="s">&quot;zh_CN.UTF-8&quot;</span>
+<span class="n">LC_NUMERIC</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_TIME</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_COLLATE</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_MONETARY</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_MESSAGES</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_PAPER</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_NAME</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_ADDRESS</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_TELEPHONE</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_MEASUREMENT</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+<span class="n">LC_IDENTIFICATION</span><span class="o">=</span><span class="s">&quot;en_US.UTF-8&quot;</span>
+</code></pre>
+</div>
+
+
+
+
+<!-- more start -->
+
+
+<h4>加入新的字体文件</h4>
+
+<p>在／usr/share/fonts现新建一个文件夹，如msfonts。到window的fonts目录下拷贝一些ttf和ttc结尾的字体(正版爱好者可下载免费的自由的开源的中文字体代替，下步配置文件需要相应修改)。字体文件我已经打包，一共48M，存放在百度网盘。包括Microsoft YaHei，Microsoft JhengHei，Segoe UI，Courier New，下载地址：<a href="http://pan.baidu.com/share/link?shareid=94048&amp;uk=2986497451">猛击此处</a>，正版爱好者可以无视。</p>
+
+<div class="highlight"><pre><code class="c"><span class="n">emerge</span> <span class="n">mkfontdir</span> <span class="n">mkfontscale</span>
+<span class="n">mkfontdir</span>
+<span class="n">mkfontscale</span>
+<span class="n">fc</span><span class="o">-</span><span class="n">cache</span> <span class="o">-</span><span class="n">fv</span>
+</code></pre>
+</div>
+
+
+<p>更新字体</p>
+
+<h4>更新配置文件</h4>
+
+<p>编辑／etc/fonts/local.conf(全局配置)或者~/.font.conf(当前配置)</p>
+
+<div class="highlight"><pre><code class="xml"><span class="cp">&lt;?xml version=&quot;2.0&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE fontconfig SYSTEM &quot;fonts.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;fontconfig&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;dpi&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;double&gt;</span>90<span class="nt">&lt;/double&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- Sans-serif faces --&gt;</span>
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>Segoe UI<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;family&gt;</span>Microsoft YaHei<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;family&gt;</span>Microsoft JhengHei<span class="nt">&lt;/family&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="c">&lt;!-- Serif faces --&gt;</span>
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;family&gt;</span>serif<span class="nt">&lt;/family&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="c">&lt;!-- Monospace faces --&gt;</span>
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>sans-serif<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;prefer&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Segoe UI<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft YaHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft JhengHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>serif<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;prefer&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft YaHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft JhengHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;prefer&gt;</span>
+        <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft JhengHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Microsoft YaHei<span class="nt">&lt;/family&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Courier New<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>Arial<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;prefer&gt;</span>
+        <span class="nt">&lt;family&gt;</span>Segoe UI<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;/prefer&gt;</span>
+    <span class="nt">&lt;default&gt;</span>
+        <span class="nt">&lt;family&gt;</span>sans-serif<span class="nt">&lt;/family&gt;</span>
+    <span class="nt">&lt;/default&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+<span class="nt">&lt;alias&gt;</span>
+    <span class="nt">&lt;family&gt;</span>SimSunNew<span class="nt">&lt;/family&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="c">&lt;!-- Sans-Serif --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>Segoe UI<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>SimSunNew<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span> <span class="na">name=</span><span class="s">&quot;lang&quot;</span> <span class="na">compare=</span><span class="s">&quot;contains&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>zh<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;spacing&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>dual<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;spacing&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>proportional<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;globaladvance&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;lang&quot;</span> <span class="na">compare=</span><span class="s">&quot;contains&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>zh<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;outline&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;spacing&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>mono<span class="nt">&lt;/const&gt;</span>
+        <span class="nt">&lt;const&gt;</span>charcell<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;spacing&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>proportional<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;globaladvance&quot;</span> <span class="na">binding=</span><span class="s">&quot;strong&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- Chinese Simple Font --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>Microsoft YaHei<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- Chinese Tradition Font --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>Microsoft JhengHei<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- SimSunNew global setting. --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>SimSunNew<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hinting&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">SimSunNew embedded bitmap fonts, ppem = 12px, 13px, 14px, 15px, 16px, 18px.</span>
+<span class="c">choose as your need</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>SimSunNew<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;double&gt;</span>11.5<span class="nt">&lt;/double&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;double&gt;</span>18.5<span class="nt">&lt;/double&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;string&gt;</span>SimSunNew<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;double&gt;</span>16.5<span class="nt">&lt;/double&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;double&gt;</span>17.5<span class="nt">&lt;/double&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- Synthetic emboldening for fonts that do not have bold face available --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;test</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/test&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;embolden&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;const&gt;</span>bold<span class="nt">&lt;/const&gt;</span>
+    <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;/fontconfig&gt;</span>
+</code></pre>
+</div>
+
+
+<h4>中文输入法</h4>
+
+<p>emerge scim scim-pinyin (本文例子是scim)</p>
+
+<p>或者 emerge ibus</p>
+
+<p>或者 emerge fcitx (推荐)</p>
+
+<h4>中文编码配置</h4>
+
+<p>推荐:
++ 终端</p>
+
+<hr />
+
+<p>编辑~/.bashrc</p>
+
+<p>LC_CTYPE="zh_CN.UTF-8"</p>
+
+<ul>
+<li>X窗口</li>
+</ul>
+
+
+<hr />
+
+<p>编辑~/.xinitrc</p>
+
+<div class="highlight"><pre><code class="c"><span class="n">export</span> <span class="n">LC_CTYPE</span><span class="o">=</span><span class="s">&quot;zh_CN.GBK&quot;</span>
+<span class="n">export</span> <span class="n">XMODIFIERS</span><span class="o">=</span><span class="err">&#39;@</span><span class="n">im</span><span class="o">=</span><span class="n">SCIM</span><span class="err">&#39;</span>
+<span class="n">export</span> <span class="n">XIM</span><span class="o">=</span><span class="s">&quot;scim&quot;</span>
+<span class="n">export</span> <span class="n">XINPUT</span><span class="o">=</span><span class="s">&quot;scim&quot;</span>
+<span class="n">export</span> <span class="n">XIM_PROGRAM</span><span class="o">=</span><span class="s">&quot;scim -d&quot;</span>
+<span class="n">export</span> <span class="n">GTK_IM_MODULE</span><span class="o">=</span><span class="s">&quot;scim&quot;</span>
+<span class="n">export</span> <span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="s">&quot;xim&quot;</span>
+<span class="n">export</span> <span class="n">OOO_FORCE_DESKTOP</span><span class="o">=</span><span class="n">gnome</span>   <span class="p">(</span><span class="n">Openoffice</span> <span class="n">usescim</span><span class="p">)</span>
+<span class="n">export</span> <span class="n">XDG_MENU_PREFIX</span><span class="o">=</span><span class="n">gnome</span><span class="o">-</span>    <span class="p">(</span><span class="n">QT</span> <span class="n">Program</span> <span class="n">like</span> <span class="n">opera</span> <span class="n">use</span> <span class="n">scim</span><span class="p">)</span>
+
+<span class="n">scim</span> <span class="o">-</span><span class="n">d</span> <span class="o">&amp;</span>
+
+<span class="n">exec</span> <span class="n">gnome</span><span class="o">-</span><span class="n">session</span>
+</code></pre>
+</div>
+
+
+<h4>乱码问题</h4>
+
+<ul>
+<li>EMACS乱码：</li>
+</ul>
+
+
+<hr />
+
+<p>emacs默认使用X核心字体，显示比较难看，有些中文显示为方框。加上xft后，emacs可以使用系统字体，非常美观，中文也显示正常了。使用USE＝“Xft”emerge emacs</p>
+
+<ul>
+<li>VIM中文乱码：</li>
+</ul>
+
+
+<hr />
+
+<p>编辑~/.vimrc,添加 set fileencoding=gbk 和 set fileencodings=utf-8,gbk</p>
+
+<ul>
+<li>挂载windows盘乱码问题</li>
+</ul>
+
+
+<hr />
+
+<p>在内核中FileSystem设置Native file system选项加上utf8，或者挂载磁盘时设置编码 mount ／dev/sda5 /mnt/udisk -o iocharset=utf-8</p>
+
+<!-- more end -->
+
+</div>
+<section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/blog/2012/10/26/check-token/">CheckToken</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2012/10/25/check-src/">CheckToken</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2012/10/22/vim-set/">VIM插件配置</a>
+        </li>
+    
+    </ul>
+</section>
+
+
+	<footer>
+	<p class="meta">
+	<span class="byline author vcard">Posted by <span class="fn">Shawhu</span></span>
+	<time>2010-Aug-08</time>
+	<span class="categories">
+		in category:
+		
+		<a class='category' href='/blog/categories/index.html#Linux-ref/'> Linux </a>
+		
+	</span>
+	<span class="tags">
+		in tags:
+		
+		<a class='tag' href='/blog/tags/index.html#gentoo-ref/'> gentoo </a>
+		
+	</span>
+	</p>
+	
+	<div class="sharing">
+    <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_tsina"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <span class="bds_more"></span>
+        <a class="shareCount"></a>
+    </div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+    </script>
+    <!-- Baidu Button END -->
+</div>
+
+	
+	<p class="meta">
+	
+	
+	<a class="basic-alignment right articlenav" href="/blog/2012/09/16/hello-world/" title="Next Post: Hello World">Hello World &raquo;</a>
+	
+	</p>
+	</footer>
+	</article>
+	
+	<section>
+	<h1>Comments</h1>
+	<div id="disqus_thread" aria-live="polite">
+<script type="text/javascript">
+      var disqus_shortname = 'shawhu';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = '/blog/2010/08/08/gentoo-locale/';
+        var disqus_url = '/blog/2010/08/08/gentoo-locale/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+</div>
+	</section>
+	
+</div>
+
+
+      
+		<aside class="sidebar">
+    		<section>
+  <h1>License</h1>
+  <p>
+   <img class="center" alt="License" src="/images/nc-sa-2.5.png" />
+  本站所有作品采用<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/">知识共享署名-非商业性使用-相同方式共享 2.5 中国大陆许可协议</a>进行许可。
+  </p>
+</section>
+
+<section>
+  <h1>Categories</h1>
+  <p>
+  <div id='category_list'>
+	
+	<li><a href="/blog/categories/index.html#Linux-ref" title="Linux" rel="1">Linux <sup>(1)</sup></a></li>
+	
+	<li><a href="/blog/categories/index.html#Life-ref" title="Life" rel="1">Life <sup>(1)</sup></a></li>
+	
+	<li><a href="/blog/categories/index.html#Method-ref" title="Method" rel="1">Method <sup>(1)</sup></a></li>
+	
+	<li><a href="/blog/categories/index.html#Programming-ref" title="Programming" rel="2">Programming <sup>(2)</sup></a></li>
+	
+	<li><a href="/blog/categories/index.html#Editor-ref" title="Editor" rel="1">Editor <sup>(1)</sup></a></li>
+	
+	<li><a href="/blog/categories/index.html#C/C++-ref" title="C/C++" rel="1">C/C++ <sup>(1)</sup></a></li>
+	
+  </div>
+  </p>
+</section>
+
+<section>
+<h1>Tag Cloud</h1>
+<p>
+<div id='tag_cloud'>
+	
+	<a href="/blog/tags/index.html#gentoo-ref" title="gentoo" rel="1">gentoo <sup>(1)</sup></a>
+	
+	<a href="/blog/tags/index.html#life-ref" title="life" rel="1">life <sup>(1)</sup></a>
+	
+	<a href="/blog/tags/index.html#jekyll-ref" title="jekyll" rel="1">jekyll <sup>(1)</sup></a>
+	
+	<a href="/blog/tags/index.html#c/cpp-ref" title="c/cpp" rel="2">c/cpp <sup>(2)</sup></a>
+	
+	<a href="/blog/tags/index.html#vim-ref" title="vim" rel="1">vim <sup>(1)</sup></a>
+	
+	<a href="/blog/tags/index.html#编程-ref" title="编程" rel="1">编程 <sup>(1)</sup></a>
+	
+</div>
+</p>
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+    size: {start: 1, end: 2, unit: 'em'}
+};
+
+$(function () {
+    $('#tag_cloud a').tagcloud();
+});
+</script>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/26/check-token/">CheckToken</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/check-src/">CheckToken</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/22/vim-set/">VIM插件配置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/10/const-override/">const的毛病</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/10/Jekyll-OpenShift/">Jekyll On OpenShift</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+	<h1>Links</h1>
+    <p><a href="http://saipingwen.org">猴子</a>  超级大牛</p>
+    <p><a href="http://www.baidu.com">百度</a></p>
+    <p><a href="http://www.cplusplus.com/reference">CPP Reference<a></p>
+</section>
+
+
+		</aside>
+	  
+    </div>
+  </div>
+  <footer role="contentinfo">
+  	<p>
+  	Copyright &copy; 2012 - Shawhu
+  	<span class="credit">Powered by <a href="https://github.com/mojombo/jekyll"> Jekyll </a></span> 
+   	and 
+  	<span class="credit"><a href="http://octopress.org"> Octopress Classic Theme</a></span>
+	</p>
+  </footer>
+</body>
+</html>

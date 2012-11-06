@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="author" content="{{ site.author }}">
+  {% if page.keywords %}
+  	<meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  {% if page.Description  %}
+    <meta name="Description " content="{{ page.Description  }}">
+  {% endif %}
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link href="/stylesheets/highlight.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/javascripts/modernizr-2.0.js"></script>
+  <script type="text/javascript" src="/javascripts/octopress.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.tagcloud.js"></script>
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  {% include google_analytics.html %}
+  {% include baidu_tongji.html %}
+</head>
+<body>
+  <header role="banner">
+  	<hgroup>
+  	<h1><a href="/" nofollow>{{ site.title }}</a></h1>
+  	{% if site.subtitle %}
+    	<h2>{{ site.subtitle }}</h2>
+  	{% endif %}
+  	<div class="clear"></div>
+	</hgroup>
+  </header>
+  <nav role="navigation">
+    <ul class="subscription" data-subscription="rss">
+  	  <li>
+  		<a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+  	  </li>
+    </ul>
+    {% if site.google_search_id %}
+    <form action="http://www.google.com.hk/cse" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="cx" value="{{ site.google_search_id }}"/>
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+    {% endif %}
+    <ul class="main-navigation">
+      <li><a href="/" nofollow >Blog</a></li>
+      <li><a href="/blog/archives" nofollow >Archives</a></li>
+      <li><a href="/about" nofollow >About</a></li>
+    </ul>	
+  </nav>
+  <div id="main">
+    <div id="content">
+      {{ content | expand_urls }}
+      {% unless page.sidebar == false %}
+		<aside class="sidebar">
+    		{% include aside.html %}
+		</aside>
+	  {% endunless %}
+    </div>
+  </div>
+  <footer role="contentinfo">
+  	<p>
+  	Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}
+  	<span class="credit">Powered by <a href="https://github.com/mojombo/jekyll"> Jekyll </a></span> 
+   	and 
+  	<span class="credit"><a href="http://octopress.org"> Octopress Classic Theme</a></span>
+	</p>
+  </footer>
+</body>
+</html>
