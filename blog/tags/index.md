@@ -9,10 +9,10 @@ title: Tags
 	<h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
 	<hr>
 	{% for post in tag[1] %}
-		<h4>
-			<time>{{ post.date | date: "%Y-%b-%d" }}</time>  &raquo;   
-			<a href='{{ post.url }}'>{{post.title}}</a>
-		</h4>
+	<p>
+		<time>{{ post.date | date: "%Y-%b-%d" }}</time>  &raquo;   
+		<strong><a href='{{ post.url }}'>{{post.title}}</a></strong>
+	</P>
 	{% endfor %}
     </article>
     {% endfor %}
