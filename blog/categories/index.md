@@ -7,12 +7,12 @@ title: Categories
 
 	{% for cat in site.categories %}
 	<article class="hentry" role="article">
-	<h3 id="{{ cat[0] }}-ref">{{ cat[0] }}</h3>
+	<h1 id="{{ cat[0] }}-ref">{{ cat[0] }}</h1>
 	<hr>
 	{% for post in cat[1] %}
 	<p>
 		<time>{{ post.date | date: "%Y-%b-%d" }}</time>  &raquo;   
-		<strong><a href='{{ post.url }}'>{{post.title}}</a></strong>
+		<a href='{{ post.url }}'>{{post.title}}</a>
 	</P>
 	{% endfor %}
     </article>
