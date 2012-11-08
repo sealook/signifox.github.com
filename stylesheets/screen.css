@@ -321,7 +321,7 @@ body > div > div {
 
 /* line 24, D:/github/sass/base/_typography.scss */
 body > header h1 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-family: "League", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.2em;
@@ -673,9 +673,9 @@ body div.pagination {
 }
 /* line 85, D:/github/sass/base/_layout.scss */
 body > header {
-  font-size: 0.75emem;
+  font-size: 1em;
   padding-top: 1.5em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.7em;
 }
 
 /* line 92, D:/github/sass/base/_layout.scss */
@@ -773,7 +773,7 @@ body.sidebar-footer .toggle-sidebar {
 @media only screen and (min-width: 550px) {
   /* line 125, D:/github/sass/base/_layout.scss */
   body > header {
-    font-size: 0.75emem;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -819,7 +819,7 @@ body.sidebar-footer .toggle-sidebar {
 
   /* line 135, D:/github/sass/base/_layout.scss */
   body > header {
-    font-size: 0.9emem;
+    font-size: 1.2em;
   }
 
   /* line 136, D:/github/sass/base/_layout.scss */
@@ -907,7 +907,7 @@ body.sidebar-footer .toggle-sidebar {
 @media only screen and (min-width: 992px) {
   /* line 170, D:/github/sass/base/_layout.scss */
   body > header {
-    font-size: 0.975emem;
+    font-size: 1.3em;
   }
 
   /* line 171, D:/github/sass/base/_layout.scss */
@@ -946,54 +946,31 @@ body > header {
 body > header h1 {
   display: inline-block;
   margin: 0;
-  font-size: 2.7em;
+  font-size: 1.7em;
   padding-left: 0.1em;
+  padding-bottom: .5em;
   text-shadow: rgba(0, 0, 0, 0.8) 0 0 8px;
   float: left;
 }
-/* line 10, D:/github/sass/partials/_header.scss */
+/* line 11, D:/github/sass/partials/_header.scss */
 body > header h1 a, body > header h1 a:visited, body > header h1 a:hover {
   color: #f2f2f2;
   text-decoration: none;
 }
-/* line 15, D:/github/sass/partials/_header.scss */
+/* line 16, D:/github/sass/partials/_header.scss */
 body > header div {
   float: left;
   font-family: "League", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
 }
-/* line 19, D:/github/sass/partials/_header.scss */
+/* line 20, D:/github/sass/partials/_header.scss */
 body > header div span {
   color: blue;
 }
-/* line 23, D:/github/sass/partials/_header.scss */
-body > header div#logo {
-  margin-top: 0.58em;
-  font-size: 1.9em;
-  color: #f9f9f9;
-}
-/* line 28, D:/github/sass/partials/_header.scss */
-body > header div#logoText {
-  color: #f1f1f1;
-  letter-spacing: 1px;
-  margin: -1px 0 0 -6px;
-}
-/* line 33, D:/github/sass/partials/_header.scss */
-body > header div#logoRight {
-  margin-left: -6px;
-}
-/* line 36, D:/github/sass/partials/_header.scss */
-body > header div#logoLeft, body > header #logoRight {
-  color: #1b88ff;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: normal;
-  font-size: 1.2em;
-  margin-left: -8px;
-}
-/* line 43, D:/github/sass/partials/_header.scss */
+/* line 25, D:/github/sass/partials/_header.scss */
 body > header h2 {
   margin: -10px 0 0 0;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #aaaaaa;
   font-weight: normal;
   letter-spacing: 1px;
