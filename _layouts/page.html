@@ -2,20 +2,20 @@
 layout: default
 ---
 
-<div>
-<article role="article">
-  {% if page.title %}
-  <header>
-    <h1 class="entry-title">{{ page.title | titlecase }}</h1>
-  </header>
-  {% endif %}
-  {{ content }}
-</article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include disqus_thread.html %}</div>
-  </section>
+<section class="page type-page status-publish hentry">
+    <div class="title">
+      <h2>{{ page.title }}</h2>
+    </div>
+    <div class="entry">
+      {{ content }}
+    </div>
+    <div class="post-meta">
+    </div>
+</section>
+{% if page.comments %}
+  <div class="comment">
+  		{% include comments.md %}
+  </div>
 {% endif %}
-</div>
+
 
