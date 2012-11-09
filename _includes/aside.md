@@ -40,7 +40,7 @@
         <li class="widget">
           <h3 class="widgettitle">近期文章</h3>
           <ul class="posts">
-            {% for post in site.posts limit:{{ recent_posts }} %}
+            {% for post in site.posts limit: 5 %}
               <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
             {% endfor %}
           </ul>

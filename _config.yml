@@ -3,7 +3,6 @@ permalink: /:year-:month-:title/
 markdown: rdiscount
 pygments: true 
 paginate: 5
-recent_posts: 5
 excerpt_link: "阅读更多 &rarr;"
 
 title: 慎独
