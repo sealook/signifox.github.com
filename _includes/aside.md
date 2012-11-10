@@ -1,15 +1,6 @@
 <aside>
       <ul id="side" class="clear">
         <li class="widget">
-          <div class="license">
-            <p><img class="aligncenter" class="center" alt="License" src="/media/image/nc-sa-2.5.png" /></p>
-            <p>本站所有作品采用
-              <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/">知识共享署名-非商业性使用-相同方式共享 2.5 中国大陆许可协议</a>
-              进行许可。
-            </p>
-          </div>
-        </li>
-        <li class="widget">
           <h3 class="widgettitle">分类目录</h3>
           <ul class="categories">
               {% for cat in site.categories %}
