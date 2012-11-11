@@ -1,10 +1,4 @@
 <header>
-  <form role="search" method="get" id="searchform" action="http://www.google.com.hk/cse">
-    <fieldset role="search">
-        <input type="hidden" name="cx" value="{{ site.google_search_id }}"/>
-        <input id="sea" class="search" type="text" name="q" results="0" placeholder="Search"/>
-    </fieldset>
-  </form>
   <div class="hgroup">
       <h1><a href="/">{{ site.title }}</a></h1>
       {% if site.subtitle %}
