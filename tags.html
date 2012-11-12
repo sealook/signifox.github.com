@@ -9,7 +9,7 @@ comments: false
   <p>
     <div id='tag_cloud'>
       {% for tag in site.tags %}
-            <a href="/blog/tags.html#{{ tag[0] }}-ref" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} 
+            <a href="/tags.html#{{ tag[0] }}-ref" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} 
               <sup>({{ tag[1].size }})</sup>
             </a>
       {% endfor %}
