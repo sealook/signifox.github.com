@@ -29,6 +29,8 @@ tags:
 
 ### 三. 后记
 
-由于不知名原因，我将博客由openshift转移到了github，仍然使用jekyll引擎，主题对Octopress的Classic theme稍加修改拿为已用。作为一名不懂前端不懂ruby的码农表示折腾网页亚历山大。
+由于不知名原因，我将博客由openshift转移到了github，仍然使用jekyll引擎，主题是对WordPress的iLost稍加修改拿为已用，该主题是GPL协议，所以我的修改版也被传染了，源码地址是[github](http://github.com/signifox/signifox.github.com)。
+
+附：作为一名不懂前端不懂ruby的且爱折腾又有一点完美主义不治之症的苦憋码农表示折腾界面真的压力很大，以后没事绝不折腾主题了，否则剁手以谢天下。
 
 
