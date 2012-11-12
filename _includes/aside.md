@@ -13,7 +13,7 @@
            <p>
               <div id='tag_cloud'>
                 {% for tag in site.tags %}
-                <a href="/blog/tags.html#{{ tag[0] }}-ref" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} 
+                <a href="/tags.html#{{ tag[0] }}-ref" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} 
                 <sup>({{ tag[1].size }})</sup>
                 </a>
                 {% endfor %}
@@ -46,7 +46,7 @@
         <li class="widget">
           <h3 class="widgettitle">友情链接</h3>
           <ul class='blogroll'>
-            <li><a href="http://saipingwen.org">猴子</a>  超级大牛</li>
+            <li><a href="http://saipingwen.org">猴子</a></li>
             <li><a href="http://www.baidu.com">百度</a></li>
             <li><a href="http://www.cplusplus.com/reference">CPP Reference<a></li>
           </ul>
