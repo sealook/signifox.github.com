@@ -70,7 +70,7 @@ header .feedrss{float:left;display:block;overflow:hidden;background:url(/media/i
 header .feedrss:hover{background-position:0 -16px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform-origin:30% 50%;-webkit-transform-origin:30% 50%;-moz-transform-origin:30% 50%;}
 
 header div.menu,header nav{float:left;overflow:hidden;height:25px;text-align:right;}
-header div.menu{width:560px;}
+header div.menu{width:560px; float:right}
 header nav{width:590px;}
 header div.menu ul,header nav ul{margin:0;list-style:none;}
 header .menu{margin:0;padding:0 10px 0 20px;background:url(/media/image/gradient.png) no-repeat 0 9em;}
