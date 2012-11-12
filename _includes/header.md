@@ -1,10 +1,7 @@
 <header>
   <div class="hgroup">
-      <h1><a href="/">{{ site.title }}</a></h1>
-      {% if site.subtitle %}
-          <span class="hidden">{{ site.subtitle }}</span>
-        {% endif %}
-      <a class="feedrss" href="{{ site.subscribe_rss }}">Feed Rss</a>
+      <h1><a class="title" href="/">{{ site.title }}</a></h1>
+      <h3 class="description">诚其意者，毋自欺也</h3>
     </div>
     <div class="menu">
       <ul>
