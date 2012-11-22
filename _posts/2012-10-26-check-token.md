@@ -1,11 +1,9 @@
 ---
 layout: post
 title: CheckToken
-comments: true
-categories:
-- Programming
-tags:
-- c/cpp
+description: 一个小小的C代码，检查基本功。
+categories: Programming
+tags:  c/cpp 
 ---
 
 
@@ -70,7 +68,7 @@ bool check(const char * token){
     return ( !hasError && hasToken );
 }
 {% endhighlight %}
-<!-- more start -->
+
 #### 三.同事的代码
 {% highlight c %}
 bool IsToken(const char* token){
@@ -107,4 +105,3 @@ bool IsToken(const char* token){
     return nPair > 0;
 }
 {% endhighlight %}
-<!-- more end -->

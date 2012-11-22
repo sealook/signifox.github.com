@@ -1,55 +1,72 @@
 ---
-layout: default
+layout: page
 ---
 
-<div class="blog-index">
-  {% for post in paginator.posts %}
-    <article>
-      <header>
-        <h1 class="entry-title">
-          <a href="{{ post.url }}">{{ post.title | titlecase }}</a>
-        </h1>
-          <p class="meta">
-            <time>{{ post.date | date: "%Y-%d-%b" }}</time>
-         </p>
-      </header>
-     <div class="entry-content">
-     {{ post.content | replace:'more start -->','' | replace:'<\!-- more end','' }}
-     </div>
-     <footer>
-        <a rel="full-article" href="{{ post.url }}">{{ site.excerpt_link }}</a>
-    </footer>
-    </article>
-  {% endfor %}
-  <div id="post-pagination" class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a href="/">前页</a>
-    {% else %}
-    <a href="/page{{paginator.previous_page}}">前页</a>
-    {% endif %}
-  {% else %}
-    <span class="previous disabled">前页</span>
-  {% endif %}
-  
-  {% if paginator.page == 1 %}
-      <span id= "current-page" class="current-page">1</span>
-      {% else %}
-      <a href="/">1</a>
-      {% endif %}
-  {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <span id= "current-page" class="current-page">{{count}}</span>
-      {% else %}
-      <a href="/page{{count}}">{{count}}</a>
-      {% endif %}
-  {% endfor %}
+<div class="main-index fn-clear">
+	{% for post in paginator.posts %}
+	<article class="main-excerpt fn-clear">
+	<h3 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h3>
+	<p class="date"><time pubdate="{{ post.date }}"><i class="icon-time"></i>{{ post.date| date: "%B %e,%Y" }}</time></p>
+	<p>{{ post.description }}</p>
+	<p class="more"><a href="{{ post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+	</article>
+	{% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}">后页</a>
-  {% else %}
-    <span class="next disabled" >后页</span>
-  {% endif %}
-  (共{{ paginator.total_posts }}篇)
+	<nav class="pagination fn-clear">
+	{% if paginator.previous_page %}
+	{% if paginator.previous_page == 1 %}
+	<span class="page">&lt;<a href="/">前页</a></span>
+	{% else %}
+	<span class="page">&lt;<a href="/page{{paginator.previous_page}}">前页</a></span>
+	{% endif %}
+	{% else %}
+	<span class="page">&lt;前页</span>
+	{% endif %}
+	{% if paginator.page == 1 %}
+	<span class="currentitem"><a href="/">1</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/">1</a></span>
+	{% endif %}
+	{% for count in (2..paginator.total_pages) %}
+	{% if count == paginator.page %}
+	<span class="currentitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% else %}
+	<span class="pageitem"><a href="/page{{count}}">{{count}}</a></span>
+	{% endif %}
+	{% endfor %}
+	{% if paginator.next_page %}
+	<span class="page"><a class="next" href="/page{{paginator.next_page}}">后页</a>&gt;</span>
+	{% else %}
+	<span class="page" >后页&gt;</span>
+	{% endif %}
+	<span class="page">(共{{ paginator.total_posts }}篇)</span>
+	</nav>
 </div>
-</div>
+
+<hr/>
+
+<section class="lost-double fn-clear">
+<article class="article article-first">
+<h3>最新文章</h3>
+<ul>
+	{% for post in site.posts limit: 4 %}
+	<li><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
+</article>
+<article class="article article-last">
+<h3>友情链接</h3>
+<ul>
+	<li>人类
+	<ul>
+		<li><a href="http://saipingwen.org">文赛平</a>&nbsp;大牛</li>
+	</ul>
+	</li>
+	<li>良心
+	<ul>
+		<li><a href="http://www.cplusplus.com/reference">CPP参考</a></li>
+	</ul>
+	</li>
+</ul>
+</article>
+</section>

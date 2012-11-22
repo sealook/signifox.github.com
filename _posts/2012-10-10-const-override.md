@@ -1,14 +1,12 @@
 ---
 layout: post
 title: const的毛病
-comments: true
-categories:
-- Programming
-tags:
-- c/cpp
+description: const是c++中一个比较让人疑惑的概念，特此总结一些。
+categories: Programming
+tags: c/cpp
 ---
 
-### C++在参数及函数名相同的情况下，const可以构成函数重载。
+###1.C++在参数及函数名相同的情况下，const可以构成函数重载。
 {% highlight c %}
 - void function(){};
 - void function() const{};
@@ -29,8 +27,6 @@ public:
 	3. 若const对象想调用非const成员函数，同理const_cast<Object&>(constObj).function()(注意：constObj要加括号);
 	4. 普通函数（相对于类的成员函数），优先调用非const的函数。
 
-<!-- more start -->
-
 + 类中只存在一种函数时：
 	1. 非const对象可以调用const成员函数或非const成员函数;
 	2. const对象只能调用const成员函数,直接调用非const函数时编译器会报错;
@@ -40,9 +36,7 @@ public:
 说明：
 const成员函数不能更改任何非静态成员变量;
 
----
-
-### const和typedef的 化学反应
+###2.const和typedef的 化学反应
 
 typedef string* pstring;
 
@@ -57,11 +51,9 @@ const pstring cstr;
 const pstring cstr1;
 string* const cstr2;
 
-
 > 
 const string str1;
 string const str2;
 
 两者类型也相同。
 
-<!-- more end -->

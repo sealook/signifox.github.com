@@ -1,23 +1,18 @@
 ---
 layout: post
 title: Jekyll On OpenShift
-comments: true
-categories:
-- Method
-tags:
-- jekyll
+description: 使用Openshift的DIY模式搭建自动化的Jelyll平台，使用私有git仓库和jekyll的plugin功能，秒杀github。（openshift升级造成某些环境变量不可用，请自行修改）
+categories: Method
+tags: jekyll openshift
 ---
 
-1. 创建Openshift应用
-======
----
+###1.创建Openshift应用
+
 [OpenShift](https://openshift.redhat.com)是redhat公司推出的一个PaaS云计算应用平台台。申请账号之后，创建使用DIY框架的Application，同时在网站添加相应的SSH 公钥保证git可以正常提交。
 {% highlight c %}
 ssh-keygen
 {% endhighlight %}
 将~/.ssh/id_rsa.pub中内容拷给网站的SSH Key里。
-
-
 
 OpenShift提供私有的git仓库，创建的应用可以直接通过git提交和SSH登录访问，这一步需要事先设置SSH Key。
 
@@ -31,9 +26,8 @@ ssh登录方式：
 ssh://f44e1c405e8642eeba13fa0536b15fe8@blog-huxiao.rhcloud.com
 {% endhighlight %}
 
-2. 准备空间环境
-======
----
+###2.准备空间环境
+
 ####ssh登录服务器，各目录文件说明如下：
 
 + ~/app-root/data/目录，存放静态数据，包含一个.bash_profile
@@ -43,8 +37,6 @@ ssh://f44e1c405e8642eeba13fa0536b15fe8@blog-huxiao.rhcloud.com
 + ~/blog是~/diy-0.1的软链接
 + ~/diy-0.1/，包含blog_ctl.sh,ci,data,logs,repo ,run ,runtime,tmp，很多软链接
 + ~/app-root/repo/.openshift/action_hooks/目录 ，包含一些脚本，start，stop，build，deploy等。
-
-<!-- more start -->
 
 #### 修改系统环境变量
 由于默认home目录是root用户创建的，我们没有读写权限。
@@ -244,16 +236,14 @@ export HOME='/var/lib/stickshift/f44e1c405e8642eeba13fa0536b15fe8/'
 export PATH=/usr/libexec/stickshift/cartridges/diy-0.1/info/bin/:/usr/libexec/stickshift/cartridges/abstract/info/bin/:/sbin:/usr/sbin:/bin:/usr/bin
 {% endhighlight %}
 
-3. 大功告成
-======
----
+####3.大功告成
+
 现在在本地编写MakrDown文件，git push时自动停止服务器，编译源文件，部署静态网页到nginx的工作目录，然后重启服务。
 
 现在一切都自动化了，类似Github的发布方式，系统自动完成了所有的事情。此外系统还有执行动态网页的潜力，相比Github更加灵活方便。
 
-4. 参考
-======
----
+####4.参考
+
 
 1. [像黑客一样写博客——Jekyll入门](http://www.soimort.org/tech-blog/2011/11/19/introduction-to-jekyll_zh.html)
 
@@ -261,4 +251,3 @@ export PATH=/usr/libexec/stickshift/cartridges/diy-0.1/info/bin/:/usr/libexec/st
 
 3. [OpenShift DIY自己的服务器环境python2.7+django](http://blog.gideal.org/articles/2012/09/05/1346782192657.html)
 
-<!-- more end -->

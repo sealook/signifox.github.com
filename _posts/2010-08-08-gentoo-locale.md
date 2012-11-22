@@ -1,15 +1,12 @@
 ---
 layout: post
 title: gentoo 中文化指南
-comments: true
-categories:
-- Linux
-tags:
-- gentoo 
+description: 关于安装gentoo操作系统之后中文化的一些经验和方法。
+categories: Linux
+tags: gentoo chinese
 ---
 
-
-####设置locale
+####1.设置locale
 编辑/etc/locale.gen中添加
 {% highlight c %}
 zh_CN.UTF-8
@@ -20,7 +17,7 @@ zh_CN.GB18030
 
 然后运行locale-gen命令
 
-####设置默认locale环境
+####2.设置默认locale环境
 编辑/etc/env.d/02locale
 {% highlight c %}
 LANG="zh_CN.UTF-8"
@@ -38,11 +35,8 @@ LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 {% endhighlight %}
 
-<!-- more start -->
-
-####加入新的字体文件
+####3.加入新的字体文件
 在／usr/share/fonts现新建一个文件夹，如msfonts。到window的fonts目录下拷贝一些ttf和ttc结尾的字体(正版爱好者可下载免费的自由的开源的中文字体代替，下步配置文件需要相应修改)。字体文件我已经打包，一共48M，存放在百度网盘。包括Microsoft YaHei，Microsoft JhengHei，Segoe UI，Courier New，下载地址：[猛击此处](http://pan.baidu.com/share/link?shareid=94048&uk=2986497451)，正版爱好者可以无视。
-
 
 {% highlight c %}
 emerge mkfontdir mkfontscale
@@ -53,7 +47,7 @@ fc-cache -fv
 
 更新字体
 
-####更新配置文件
+####4.更新配置文件
 编辑／etc/fonts/local.conf(全局配置)或者~/.font.conf(当前配置)
 {% highlight xml %}
 
@@ -346,26 +340,22 @@ choose as your need
 
 {% endhighlight %}
 
-####中文输入法
+####5.中文输入法
 emerge scim scim-pinyin (本文例子是scim)
 
 或者 emerge ibus
 
 或者 emerge fcitx (推荐)
 
-####中文编码配置
+####6.中文编码配置
 推荐:
 + 终端
-
----
 
 编辑~/.bashrc
 
 LC_CTYPE="zh_CN.UTF-8"
 
 + X窗口
-
----
 
 编辑~/.xinitrc
 {% highlight c %}
@@ -384,24 +374,15 @@ scim -d &
 exec gnome-session
 {% endhighlight %}
 
-
-####乱码问题
+####7. 乱码问题
 + EMACS乱码：
-
----
 
 emacs默认使用X核心字体，显示比较难看，有些中文显示为方框。加上xft后，emacs可以使用系统字体，非常美观，中文也显示正常了。使用USE＝“Xft”emerge emacs
 
 + VIM中文乱码：
 
----
-
 编辑~/.vimrc,添加 set fileencoding=gbk 和 set fileencodings=utf-8,gbk
 
 + 挂载windows盘乱码问题
 
----
-
 在内核中FileSystem设置Native file system选项加上utf8，或者挂载磁盘时设置编码 mount ／dev/sda5 /mnt/udisk -o iocharset=utf-8
-
-<!-- more end -->
