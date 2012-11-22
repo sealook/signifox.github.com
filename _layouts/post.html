@@ -6,7 +6,7 @@ layout: page
 {{ content }}
 </article>
 <p class="lost-pagebtn">
-日期: <i class="icon-time"></i>{{  page.date | date_to_string }} &nbsp;
+日期<i class="icon-time"></i>:{{  page.date | date_to_string }} &nbsp;
 分类<i class="icon-cogs"></i>：
 {% for cat in page.categories %} 
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
