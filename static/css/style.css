@@ -484,6 +484,8 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 		margin-left: 0;
 		margin-top: 2em;
 	}
+    .lost-footer .alignright { float:left;margin:4px 20px 2px 24px; }
+    .lost-logo .alignright { float:left;margin: 4px 1px 2px 1px; }
 }
 /**
  * for post img
