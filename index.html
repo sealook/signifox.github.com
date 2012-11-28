@@ -3,6 +3,7 @@ layout: page
 ---
 
 <div class="main-index fn-clear">
+	{% include note.md %}
 	{% for post in paginator.posts %}
 	<article class="main-excerpt fn-clear">
 	<h3 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h3>
