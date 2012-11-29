@@ -7,7 +7,18 @@ layout: page
 	{% for post in paginator.posts %}
 	<article class="main-excerpt fn-clear">
 	<h4 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
-	<p class="date"><time pubdate="{{ post.date }}"><i class="icon-time"></i>{{ post.date| date: "%B %e,%Y" }}</time></p>
+	<p class="date">
+	<i class="icon-time"></i>{{  post.date| date: "%B %e,%Y"  }} &nbsp;
+    <i class="icon-cogs"></i>
+    {% for cat in post.categories %} 
+    <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
+    {% endfor %}
+    &nbsp;&nbsp;
+    <i class="icon-tags"></i>
+    {% for tag in post.tags %}
+    <a href="/tags.html#{{ tag }}-ref" title="{{ tag }}" rel="tag">{{ tag }} &nbsp;</a>
+    {% endfor %}
+    </p>
 	<p>{{ post.description }}</p>
 	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>Read More</a></p>
 	</article>
