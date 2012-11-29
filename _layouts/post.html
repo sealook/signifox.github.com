@@ -1,18 +1,18 @@
 ---
-layout: page
+layout: default
 ---
 
 <article itemscope itemtype="http://schema.org/Article" class="lost-post">
 {{ content }}
 </article>
 <p class="lost-pagebtn">
-<i class="icon-time"></i>:{{  page.date | date_to_string }} &nbsp;
-<i class="icon-cogs"></i>：
+<i class="icon-time"></i>{{  page.date | date_to_string }} &nbsp;
+<i class="icon-cogs"></i>
 {% for cat in page.categories %} 
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
 {% endfor %}
 &nbsp;&nbsp;
-<i class="icon-tags"></i>：
+<i class="icon-tags"></i>
 {% for tag in page.tags %}
       <a href="/tags.html#{{ tag }}-ref" title="{{ tag }}" rel="tag">{{ tag }} &nbsp;</a>
 {% endfor %}
