@@ -3,18 +3,13 @@ layout: page
 ---
 
 <div class="main-index fn-clear">
-	<article class="main-excerpt fn-clear">
-		 <p><h2>不拖延， 不偏执，不虚妄。</h2></p>
-	</article>
-</div>	
-<div class="main-index fn-clear">
 
 	{% for post in paginator.posts %}
 	<article class="main-excerpt fn-clear">
-	<h3 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h3>
+	<h4 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
 	<p class="date"><time pubdate="{{ post.date }}"><i class="icon-time"></i>{{ post.date| date: "%B %e,%Y" }}</time></p>
 	<p>{{ post.description }}</p>
-	<p class="more"><a href="{{ post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>Read More</a></p>
 	</article>
 	{% endfor %}
 
