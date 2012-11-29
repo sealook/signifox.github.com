@@ -6,7 +6,7 @@ layout: default
 {{ content }}
 </article>
 <p class="lost-pagebtn">
-<i class="icon-time"></i>{{  post.date| date: "%B %e,%Y" }} &nbsp;
+<i class="icon-time"></i>{{  page.date | date: "%B %e,%Y" }} &nbsp;
 <i class="icon-cogs"></i>
 {% for cat in page.categories %} 
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
