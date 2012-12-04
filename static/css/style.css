@@ -194,7 +194,8 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .lost .lost-anno a { color: #1F0909; }
 
 /**Custom**/
-.lost-blockbox{ overflow:hidden;background:rgba(0, 0, 0, 0.1);border:1px solid #e8e8e8;margin:5px 1px 5px;padding:5px 16px;text-align:left;border-radius:5px;}
+.lost-ul-title {font-weight: 700;font-size: 1.4em;}
+.lost-blockbox { overflow:hidden;background:#A39480;border:1px solid #e8e8e8;margin:5px 1px 5px;padding:5px 16px;text-align:left;border-radius:5px;}
 .main-index .main-excerpt { margin-bottom: 2px; padding: 10px 0; border-bottom: 1px dashed #bebebe; } 
 .main-index .main-excerpt .date { font-style: italic; color: #888; } 
 .main-index .main-excerpt-title { font-size: 26px; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }                 
@@ -213,9 +214,9 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .lost-logo .alignright {font-family:"Microsoft YaHei","Hiragino Sans GB","Electrolize",sans-serif;font-size:16px;text-transform:uppercase;}
 .lost-logo .alignright {display:inline;float:right;margin:64px 1px 2px 1px;}
 .lost-logo .alignright span a { padding-left:8px; }
-.lost-logo .alignright span a:hover{background-color:#3e31d6;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
+.lost-logo .alignright span a:hover{background-color:#FF6100;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
 .post{padding:.5em 0em;}
-code {margin: 0 2px; padding: 0px 5px; background-color:rgba(0, 0, 0, 0.1);border-radius: 3px;}
+code {margin: 0 2px; padding: 0px 5px; background-color:#FFDEAD;border-radius: 3px;}
 pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; border: none;}
 
 /*************************
@@ -231,7 +232,7 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 	margin: 2em 0 2em 0;
 	border-bottom: 1px dotted #c8c8c8;
 }
-.lost-date { color: #a0a0a0; }
+.lost-date { color: #4169E1; }
 .lost-double {
 	margin-bottom: 3em;
 }

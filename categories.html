@@ -19,7 +19,7 @@ title:  Categories
 {% for cat in site.categories %} 
 <ul>
 <li>
-<span id="{{ cat[0] }}-ref" rel="bookmark"> {{ cat[0] }}</span>
+<span id="{{ cat[0] }}-ref" class="lost-ul-title" rel="bookmark"> {{ cat[0] }}</span>
 	<ul class="lost-cat fn-clear">
     {% for post in cat[1] %}
 	<li>

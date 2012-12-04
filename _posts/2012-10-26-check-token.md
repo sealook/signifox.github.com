@@ -7,10 +7,10 @@ tags:  c/cpp
 ---
 
 
-#### 一.题目
+### 一.题目
 检查token字符串是否合法，token可以有多个user:passwd 对，每个user:passwd 对之间至少有一个空格, user和passwd之间不能有任何空格，且都只能为字母或者数字。
 
-#### 二.我的代码
+### 二.我的代码
 {% highlight c %}
 
 enum STATUS{
@@ -69,7 +69,7 @@ bool check(const char * token){
 }
 {% endhighlight %}
 
-#### 三.同事的代码
+### 三.同事的代码
 {% highlight c %}
 bool IsToken(const char* token){
     const int N = strlen(token);
