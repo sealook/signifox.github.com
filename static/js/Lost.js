@@ -9,7 +9,7 @@ $(document).ready(function() {
         linkBottom: "120px",
         linkRight: 30,
         linkWidth: 32,
-        contentWidth: 720,
+        contentWidth: 850,
         contentBigWidth: 1024,
         _scrollTop: function() {
             if(jQuery.scrollTo) {
