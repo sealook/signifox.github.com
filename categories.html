@@ -7,7 +7,7 @@ title:  Categories
 	<div class="lost-cat lost-blockbox fn-clear">
     {% for cat in site.categories %}
 	<p>
-	  &sect; <a href="#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }}</a>
+	  &sect; <a href="#{{ cat[0] }}-ref" title="{{ cat[0] }}" class="lost-ul-title" rel="{{ cat[1].size }}">{{ cat[0] }}</a>
       <sup>({{ cat[1].size }})</sup>
 	</p>
     {% endfor %}

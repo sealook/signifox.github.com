@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .lost .lost-anno a { color: #1F0909; }
 
 /**Custom**/
-.lost-ul-title {font-weight: 700;font-size: 1.4em;}
+.lost-ul-title {font-weight: 500;font-size: 1.3em;}
 .lost-blockbox { overflow:hidden;background:#A39480;border:1px solid #e8e8e8;margin:5px 1px 5px;padding:5px 16px;text-align:left;border-radius:5px;}
 .main-index .main-excerpt { margin-bottom: 2px; padding: 10px 0; border-bottom: 1px dashed #bebebe; } 
 .main-index .main-excerpt .date { font-style: italic; color: #888; } 
@@ -232,7 +232,7 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 	margin: 2em 0 2em 0;
 	border-bottom: 1px dotted #c8c8c8;
 }
-.lost-date { color: #4169E1; }
+.lost-date { color: #292421; }
 .lost-double {
 	margin-bottom: 3em;
 }
