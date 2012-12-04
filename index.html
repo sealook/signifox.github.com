@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: default
+title: Home
 ---
 
 <div class="main-index fn-clear">
-
 	{% for post in paginator.posts %}
 	<article class="main-excerpt fn-clear">
 	<h4 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
@@ -20,10 +20,9 @@ layout: page
     {% endfor %}
     </p>
 	<p>{{ post.description }}</p>
-	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+	<p class="more"><a href="{{ post.url }}" title="阅读更多" rel="nofollow"><span>&#10149;</span>阅读更多</a></p>
 	</article>
 	{% endfor %}
-
 	<nav class="pagination fn-clear">
 	{% if paginator.previous_page %}
 	{% if paginator.previous_page == 1 %}
@@ -54,9 +53,7 @@ layout: page
 	<span class="page">(共{{ paginator.total_posts }}篇)</span>
 	</nav>
 </div>
-
 <hr/>
-
 <section class="lost-double fn-clear">
 <article class="article article-first">
 <h3>最新文章</h3>
