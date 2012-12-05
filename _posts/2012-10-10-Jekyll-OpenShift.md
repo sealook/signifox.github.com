@@ -236,13 +236,13 @@ export HOME='/var/lib/stickshift/f44e1c405e8642eeba13fa0536b15fe8/'
 export PATH=/usr/libexec/stickshift/cartridges/diy-0.1/info/bin/:/usr/libexec/stickshift/cartridges/abstract/info/bin/:/sbin:/usr/sbin:/bin:/usr/bin
 {% endhighlight %}
 
-####3.大功告成
+###3.大功告成
 
 现在在本地编写MakrDown文件，git push时自动停止服务器，编译源文件，部署静态网页到nginx的工作目录，然后重启服务。
 
 现在一切都自动化了，类似Github的发布方式，系统自动完成了所有的事情。此外系统还有执行动态网页的潜力，相比Github更加灵活方便。
 
-####4.参考
+###4.参考
 
 
 1. [像黑客一样写博客——Jekyll入门](http://www.soimort.org/tech-blog/2011/11/19/introduction-to-jekyll_zh.html)
