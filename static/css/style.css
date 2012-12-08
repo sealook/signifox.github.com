@@ -136,6 +136,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-tags:before                 { content: "\f02c"; }
 .icon-user:before                 { content: "\f007"; }
 .icon-time:before                 { content: "\f017"; }
+.icon-calendar:before             { content: "\f073"; }
 
 /*************************
  * lost design
@@ -174,7 +175,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .lost h4, .lost-h4 { font-size: 1.2em; }
 .lost h5, .lost h6, .lost-h5, .lost-h6 { font-size: 1em; }
 .lost .lost-break { line-height:  18px; font-size: 14px; font-style: italic; font-weight: 400; border-bottom: 1px dotted #e8e8e8; color: #898989; }
-.lost .lost-pagetit { padding-bottom: 0.5em; margin-bottom: 0.5em; border-bottom: 1px solid #C5C5C5; }
+.lost .lost-pagetit { padding-top: 0.5em;padding-bottom: 0.5em; margin-bottom: 0.5em; border-bottom: 1px solid #C5C5C5; }
 .lost .lost-tagline { color: #888; font-size: 13px; margin: 0 0 1.2em; font-weight: 400; }
 .lost .lost-tagline .lost-tagline-catg { margin-left: 1em; }
 .lost ul, .lost-ul { margin-left: 1.3em; list-style: disc; }

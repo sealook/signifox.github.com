@@ -8,7 +8,7 @@ title: Home
 	<article class="main-excerpt fn-clear">
 	<h4 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h4>
 	<p class="date">
-	<i class="icon-time"></i>{{  post.date| date: "%B %e,%Y"  }} &nbsp;
+	<i class="icon-calendar"></i>{{  post.date| date: "%B %e,%Y"  }} &nbsp;
     <i class="icon-cogs"></i>
     {% for cat in post.categories %} 
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
