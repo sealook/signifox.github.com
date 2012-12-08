@@ -23,7 +23,7 @@ body{
 /*************************
  * reset style
 *************************/
-html { color: #1F0909; background: #f3f2ee; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { color: #1F0909; background: #000000; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, group, menu, nav, section { margin: 0; padding: 0; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 audio, canvas, video { display: inline-block;  }
