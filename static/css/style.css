@@ -23,7 +23,7 @@ body{
 /*************************
  * reset style
 *************************/
-html { color: #1F0909; background: #0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { color: #1F0909; Hbackground: #0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, group, menu, nav, section { margin: 0; padding: 0; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 audio, canvas, video { display: inline-block;  }
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 
 /**Custom**/
 .lost-ul-title {font-weight: 500;font-size: 1.3em;}
-.lost-blockbox { overflow:hidden;background:#A39480;border:1px solid #e8e8e8;margin:5px 1px 5px;padding:5px 16px;text-align:left;border-radius:5px;}
+.lost-blockbox { overflow:hidden;background:#F0FFFF;border:1px solid #e8e8e8;margin:5px 1px 5px;padding:5px 16px;text-align:left;border-radius:5px;}
 .main-index .main-excerpt { margin-bottom: 2px; padding: 10px 0; border-bottom: 1px dashed #bebebe; } 
 .main-index .main-excerpt .date { font-style: italic; color: #888; } 
 .main-index .main-excerpt-title { font-size: 26px; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }                 
