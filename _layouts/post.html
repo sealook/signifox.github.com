@@ -6,13 +6,13 @@ layout: page
 {{ content }}
 </article>
 <p class="lost-pagebtn">
-<i class="icon-calendar"></i>:{{  page.date | date: "%B %e,%Y" }} &nbsp;
-<i class="icon-cogs"></i>:
+<i class="icon-calendar"></i>{{  page.date | date: "%B %e,%Y" }} &nbsp;
+<i class="icon-cogs"></i>
 {% for cat in page.categories %} 
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
 {% endfor %}
 &nbsp;&nbsp;
-<i class="icon-tags"></i>:
+<i class="icon-tags"></i>
 {% for tag in page.tags %}
       <a href="/tags.html#{{ tag }}-ref" title="{{ tag }}" rel="tag">{{ tag }} &nbsp;</a>
 {% endfor %}

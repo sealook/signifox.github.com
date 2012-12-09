@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .main-index .main-excerpt-title a { color: #343434; }
 .main-index .main-excerpt .more { text-align: right; color: #898989; font-size: 12px; margin-right:10px;}
 .main-index .main-excerpt .more a { color: #484848; }
-.pagination  { margin-left:10em; list-style: none outside none; }
+.pagination  { text-align:center;margin:0 auto; list-style: none outside none; }
 .pagination .page { margin: 0  .65em 0 .65em; display: inline; padding-top: 20px; }
 .pagination .currentitem a { font-size:1.5em; color:#000000; }
 .pagination .pageitem a { font-size:1.25em; color:#000000;}
@@ -429,7 +429,7 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 		margin-left: 0;
 		margin-top: 2em;
 	}
-    .lost-footer .alignright { float:left;margin:4px 20px 2px 24px; }
+    .lost-footer .alignright { float:left;margin:4px 20px 2px 1px; }
     .lost-logo .alignright { float:left;margin: 4px 1px 2px 1px; }
 }
 /**
