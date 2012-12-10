@@ -38,7 +38,7 @@ LC_IDENTIFICATION="en_US.UTF-8"
 ###3.加入新的字体文件
 在／usr/share/fonts现新建一个文件夹，如msfonts。到window的fonts目录下拷贝一些ttf和ttc结尾的字体(正版爱好者可下载免费的自由的开源的中文字体代替，下步配置文件需要相应修改)。字体文件我已经打包，一共48M，存放在百度网盘。包括Microsoft YaHei，Microsoft JhengHei，Segoe UI，Courier New，下载地址：[猛击此处](http://pan.baidu.com/share/link?shareid=94048&uk=2986497451)，正版爱好者可以无视。
 
-{% highlight bash %}
+{% highlight bash linenos %}
 emerge mkfontdir mkfontscale
 mkfontdir
 mkfontscale
@@ -49,7 +49,7 @@ fc-cache -fv
 
 ###4.更新配置文件
 编辑／etc/fonts/local.conf(全局配置)或者~/.font.conf(当前配置)
-{% highlight xml %}
+{% highlight xml linenos %}
 
 <?xml version="2.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">

@@ -97,7 +97,7 @@ jekyll  --serverk 可以启动一个ruby的Web服务器。当然需要一些修�
 
 #### 安装Pygments
 为了代码高亮，需要使用pygements。可怜的普通用户没有万恶的权限，无奈只好自己安装python2.7.3先.
-{% highlight bash %}
+{% highlight bash linenos %}
 wget http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2
 wget http://pypi.python.org/packages/source/s/setuptools/setuptools-0.6c11.tar.gz
 wget http://pypi.python.org/packages/source/p/pip/pip-1.1.tar.gz
@@ -121,7 +121,7 @@ export PATH=$OPENSHIFT_RUNTIME_DIR/bin:$PATH
 
 #### 安装Nginx
 
-{% highlight bash %}
+{% highlight bash linenos %}
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-1.2.4.tar.gz
 tar zxf nginx-1.2.4.tar.gz
@@ -133,7 +133,7 @@ make && make install
 {% endhighlight %}
 
 修改nginx.conf文件，主要是IP和Port,以及一些优化。以下是我的部分配置文件：
-{% highlight bash %}
+{% highlight bash linenos %}
 worker_processes  4;
 worker_cpu_affinity 0001 0010 0100 1000;
 worker_rlimit_nofile 10240;
@@ -177,7 +177,7 @@ exit 0
 
 #### 配置Jekyll
 编辑jekyll的配置文件_config.yml,主要是源路径和目的路径
-{% highlight bash %}
+{% highlight bash linenos %}
 source: /var/lib/stickshift/f44e1c405e8642eeba13fa0536b15fe8/app-root/runtime/repo/
 destination: /var/lib/stickshift/f44e1c405e8642eeba13fa0536b15fe8/app-root/runtime/html
 markdown: rdiscount
@@ -192,7 +192,7 @@ paginate: 16
 注意_config.yml文件存放在~/bin/目录下。
 编辑build文件,似乎git push调用hook时，我自定义的环境变量没有生效，造成Jekyll失效。同时Openshift贴心的为我准备了zh_CN.utf-8编码方式，造成ruby解码失败。
 
-{% highlight bash %}
+{% highlight bash linenos %}
 #!/bin/bash
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
