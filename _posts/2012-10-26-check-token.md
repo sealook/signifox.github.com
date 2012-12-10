@@ -11,7 +11,7 @@ tags:  c/cpp
 检查token字符串是否合法，token可以有多个user:passwd 对，每个user:passwd 对之间至少有一个空格, user和passwd之间不能有任何空格，且都只能为字母或者数字。
 
 ### 二.我的代码
-{% highlight c linenos %}
+{% highlight c %}
 
 enum STATUS{
     ST_INIT,
@@ -70,7 +70,7 @@ bool check(const char * token){
 {% endhighlight %}
 
 ### 三.同事的代码
-{% highlight c linenos %}
+{% highlight c %}
 bool IsToken(const char* token){
     const int N = strlen(token);
     int i,nLeft=0,nRight=0,nPair=0,nColon=0;
