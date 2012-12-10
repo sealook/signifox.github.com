@@ -8,7 +8,7 @@ tags: gentoo chinese
 
 ###1.设置locale
 编辑/etc/locale.gen中添加
-{% highlight c %}
+{% highlight bash %}
 zh_CN.UTF-8
 zh_CN.GBK
 zh_CN.GB2312
@@ -19,7 +19,7 @@ zh_CN.GB18030
 
 ###2.设置默认locale环境
 编辑/etc/env.d/02locale
-{% highlight c %}
+{% highlight bash %}
 LANG="zh_CN.UTF-8"
 LC_CTYPE="zh_CN.UTF-8"
 LC_NUMERIC="en_US.UTF-8"
@@ -38,7 +38,7 @@ LC_IDENTIFICATION="en_US.UTF-8"
 ###3.加入新的字体文件
 在／usr/share/fonts现新建一个文件夹，如msfonts。到window的fonts目录下拷贝一些ttf和ttc结尾的字体(正版爱好者可下载免费的自由的开源的中文字体代替，下步配置文件需要相应修改)。字体文件我已经打包，一共48M，存放在百度网盘。包括Microsoft YaHei，Microsoft JhengHei，Segoe UI，Courier New，下载地址：[猛击此处](http://pan.baidu.com/share/link?shareid=94048&uk=2986497451)，正版爱好者可以无视。
 
-{% highlight c %}
+{% highlight bash %}
 emerge mkfontdir mkfontscale
 mkfontdir
 mkfontscale
@@ -358,7 +358,7 @@ LC_CTYPE="zh_CN.UTF-8"
 + X窗口
 
 编辑~/.xinitrc
-{% highlight c %}
+{% highlight bash %}
 export LC_CTYPE="zh_CN.GBK"
 export XMODIFIERS='@im=SCIM'
 export XIM="scim"
