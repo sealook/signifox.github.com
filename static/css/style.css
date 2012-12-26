@@ -46,20 +46,19 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: t
 :root sub, :root sup{ vertical-align: baseline; }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
-
 a { color: #065588; font-size:  100%; }
 a:hover { text-decoration: underline; }
-
-h1,h2,h3,h4,h5,h6{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;}
-
 ins, a { text-decoration: none; }
-u, .lost-u { text-decoration: underline; }
 mark { background: #FFFB99; }
 pre, code { Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace;font-size:14px; overflow-x: auto; vertical-align: middle; }
 pre { border: 1px solid #d8d8d8; border-left-width: 0.4em;  background: rgba(214, 214, 214, 0.5); padding: 10px; }
 code { color:#0B3953; background: rgba(214, 214, 214, 0.5); padding: 0 0.2em; border: 1px solid #bdbdbd; border-radius: 2px 2px; vertical-align:top;}
-code .lineno { color: #FF0000; } /* Literal.Number.Integer.Long */
+code {margin: 0 2px; padding: 0px 5px; background-color:#FFDEAD;border-radius: 3px;}
+pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; border: none;}
+code .lineno { color: #FF0000; } 
 small { font-size: 12px; color: #888; }
+h1,h2,h3,h4,h5,h6{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif; font-weight: 500; font-weight: 700\9; color:#333; }
+p, pre, ul, ol, dl, form, hr, table{ margin-bottom: 1em; vertical-align: middle; }
 
 ::selection 	 	{background: rgba(0, 0, 0, 0.1);}
 ::-moz-selection 	{background: rgba(0, 0, 0, 0.1);}
@@ -120,6 +119,7 @@ li[class^="icon-"]:before, li[class*=" icon-"]:before {
 li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
     text-indent: -1.3333333333333333em;
 }
+
 .icon-home:before                 { content: "\f015"; }
 .icon-reorder:before              { content: "\f0c9"; }
 .icon-envelope-alt:before         { content: "\f0e0"; }
@@ -142,11 +142,8 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 /*************************
  * lost design
 *************************/
-.lost p, .lost pre, .lost ul, .lost ol, .lost dl, .lost form, .lost hr, .lost table,
-.lost-p, .lost-pre, .lost-ul, .lost-ol, .lost-dl, .lost-form, .lost-hr, .lost-table { margin-bottom: 1em; vertical-align: middle; }
-
-.lost blockquote p { margin-bottom: 0.4em; }
-.lost blockquote p:before {
+blockquote p { margin-bottom: 0.4em; }
+blockquote p:before {
     content: "“";
     font-size: 38px;
     line-height: 18px;
@@ -155,8 +152,7 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
     overflow: hidden;
     top: 18px;
 }
-
-.lost blockquote p:after {
+blockquote p:after {
     content: "”";
     font-size: 38px;
     line-height: 18px;
@@ -165,10 +161,8 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
     overflow: hidden;
     top: 14px;
 }
-h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 
-.lost h1, .lost h2, .lost h3, .lost h4, .lost h5, .lost h6,
-.lost-h1, .lost-h2, .lost-h3, .lost-h4, .lost-h5, .lost-h6 { margin-bottom: 0.4em; line-height: 1.5;}
+.lost h1, .lost h2, .lost h3, .lost h4, .lost h5, .lost h6{ margin-bottom: 0.4em; line-height: 1.5;}
 .lost h1, .lost-h1 { font-size: 1.8em; }
 .lost h2, .lost-h2 { font-size: 1.6em; }
 .lost h3, .lost-h3 { font-size: 1.4em; border-bottom: 1px dotted #d8d8d8; margin-top: 1.4em;}
@@ -178,7 +172,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .lost .lost-break { line-height:  18px; font-size: 14px; font-style: italic; font-weight: 400; border-bottom: 1px dotted #e8e8e8; color: #898989; }
 .lost .lost-pagetit { padding-top: 0.5em;padding-bottom: 0.5em; margin-bottom: 0.5em; border-bottom: 1px solid #C5C5C5; }
 .lost .lost-tagline { color: #888; font-size: 13px; margin: 0 0 1.2em; font-weight: 400; }
-.lost .lost-tagline .lost-tagline-catg { margin-left: 1em; }
+.lost .lost-tagline { margin-left: 1em; }
 .lost ul, .lost-ul { margin-left: 1.3em; list-style: disc; }
 .lost ol, .lost-ol { list-style: decimal; margin-left: 1.9em; }
 .lost li ul, .lost li ol, .lost-ul ul, .lost-ul ol, .lost-ol ul, .lost-ol ol { margin-top: 0; margin-bottom: 0; margin-left: 2em; }
@@ -211,15 +205,13 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 .pagination .page { margin: 0  .65em 0 .65em; display: inline; padding-top: 20px; }
 .pagination .currentitem a { font-size:1.5em; color:#000000; }
 .pagination .pageitem a { font-size:1.25em; color:#000000;}
-.lost-footer .alignleft, .lost-logo .alignleft {display:inline;float:left;margin-right:24px;margin-top:4px;}
+.lost-footer .alignleft, .constrain-logo .alignleft {display:inline;float:left;margin-right:24px;margin-top:4px;}
 .lost-footer .alignright {display:inline;float:right;margin:4px 20px 2px 24px;}
-.lost-logo .alignright {font-family:"Microsoft YaHei","Hiragino Sans GB","Electrolize",sans-serif;font-size:16px;text-transform:uppercase;}
-.lost-logo .alignright {display:inline;float:right;margin:64px 1px 2px 1px;}
-.lost-logo .alignright span a { padding-left:8px; }
-.lost-logo .alignright span a:hover{background-color:#FF6100;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
+.constrain-logo .alignright {font-family:"Microsoft YaHei","Hiragino Sans GB","Electrolize",sans-serif;font-size:16px;text-transform:uppercase;}
+.constrain-logo .alignright {display:inline;float:right;margin:64px 1px 2px 1px;}
+.constrain-logo .alignright span a { padding-left:8px; }
+.constrain-logo .alignright span a:hover{background-color:#FF6100;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
 .post{padding:.5em 0em;}
-code {margin: 0 2px; padding: 0px 5px; background-color:#FFDEAD;border-radius: 3px;}
-pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; border: none;}
 
 /*************************
  * lost layout
@@ -227,7 +219,7 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 .lost { width: 850px; padding: 1em 0 0em 0; margin: 0 auto; }
 .index { padding: 1em 0 0 0;}
 .index h4 { border-bottom: none; }
-.lost-logo {
+.constrain-logo {
 	border-bottom: 1px solid #d0d0d0;
 }
 .lost-article {
@@ -309,15 +301,6 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 
 .lost-tags a:hover {
 }
-
-#link .lost-link {
-	list-style: none;
-	margin-left: 0;
-}
-#link .lost-link-item {
-	margin-bottom: 1em;
-}
-
 .lost-post img:hover {
     cursor: pointer;
 }
@@ -383,12 +366,12 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
     text-decoration: none;
 }
 
-.violet-logo { float: left; position: relative; width: 66px; height: 66px; margin: 20px 0 12px 0px; -moz-border-radius: 33px 33px; -webkit-border-radius: 33px 33px; -o-border-radius: 33px 33px; border-radius: 33px 33px; }
-.violet-site { float: left; margin: 20px 0 12px 1px; position: relative; width: 230px; color: #525252; }
-.violet-site h1, .violet-site h1 a { font-size: 32px; font-weight: normal; color: #525252; margin-bottom: 0;}
-.violet-site h1 a:hover { color: #323232; text-decoration: none; }
-.violet-site h1 span { display: inline; padding: 0px 5px 0 3px; position: relative; line-height: 12px; font-size: 10px; color: #525252; background: #d8d8d8; border-radius: 7px 0px 7px 0; top: -23px; left: 5px; font-weight: 600;}
-.violet-site h2 { padding-top: 2px;  font-size: 14px; line-height: 14px; border-top: 1px solid #313131; }
+.logo { float: left; position: relative; width: 66px; height: 66px; margin: 20px 0 12px 0px; -moz-border-radius: 33px 33px; -webkit-border-radius: 33px 33px; -o-border-radius: 33px 33px; border-radius: 33px 33px; }
+.site { float: left; margin: 20px 0 12px 1px; position: relative; width: 230px; color: #525252; }
+.site h1, .site h1 a { font-size: 32px; font-weight: normal; color: #525252; margin-bottom: 0;}
+.site h1 a:hover { color: #323232; text-decoration: none; }
+.site h1 span { display: inline; padding: 0px 5px 0 3px; position: relative; line-height: 12px; font-size: 10px; color: #525252; background: #d8d8d8; border-radius: 7px 0px 7px 0; top: -23px; left: 5px; font-weight: 600;}
+.site h2 { padding-top: 2px;  font-size: 14px; line-height: 14px; border-top: 1px solid #313131; }
 
 /*************************
  * iMac
@@ -431,7 +414,7 @@ pre code, .highlight code{margin: 0; padding: 0; background-color: transparent; 
 		margin-top: 2em;
 	}
     .lost-footer .alignright { float:left;margin:4px 20px 2px 1px; }
-    .lost-logo .alignright { float:left;margin: 4px 1px 2px 1px; }
+    .constrain-logo .alignright { float:left;margin: 4px 1px 2px 1px; }
 }
 /**
  * for post img
